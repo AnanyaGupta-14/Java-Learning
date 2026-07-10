@@ -1,16 +1,18 @@
-//Count digits of a number
+
+//Reverse the number
 import java.util.Scanner;
-public class Problem15 {
+
+public class Problem17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number:");
         int n = sc.nextInt();
-        if(n==0) n=9;
-        int count = 0;
+        int r = 0;
         while(n!=0){
-            count++;
-            n = n/10;
+            r *= 10;
+            r += (n%10);
+            n /=10;
         }
-        System.out.println("Number of digits in the given number is "+ count);
+        System.out.println(r);
     }
 }
