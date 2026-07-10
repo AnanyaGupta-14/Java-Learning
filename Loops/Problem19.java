@@ -1,17 +1,16 @@
-//Reverse the number
+//Factorial of a number
 import java.util.Scanner;
 
-public class Problem17 {
+public class Problem19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number:");
         int n = sc.nextInt();
-        int r = 0;
-        while(n!=0){
-            r *= 10;
-            r += (n%10);
-            n /=10;
+
+        int fact =1;
+        for(int i = 1; i<=n; i++){
+            fact = fact *i;
         }
-        System.out.println(r);
+        System.out.println(fact);
     }
 }
