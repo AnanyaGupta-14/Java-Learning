@@ -8,9 +8,15 @@ public class Problem8 {
         int a = 99, d= -4;
 
 
-            while(a>0){
+        //     while(a>0){
+        //         System.out.print(a+" ");
+        //         a += d;
+            
+        // }
+         while(a>0){
                 System.out.print(a+" ");
                 a += d;
+            
         }
     }
 }
