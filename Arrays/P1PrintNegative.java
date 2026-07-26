@@ -14,7 +14,7 @@ public class P1PrintNegative {
         }
 
         //Print the negative values
-        System.out.println("The negative elements are: ")
+        System.out.println("The negative elements are: ");
         for(int i=0; i<n; i++){
             if(arr[i]<0)
             System.out.print(arr[i]+" ");
