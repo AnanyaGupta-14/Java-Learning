@@ -19,22 +19,41 @@ public class P13Segregate0and1 {
         }
     }
 
+    // public static void segregate(int[] arr){
+    //     int n = arr.length;
+    //     int numZeros = 0;
+    //     int numOnes = 0;
+
+    //     for(int i=0; i<n; i++){
+    //         if(arr[i] == 0) numZeros += 1;
+    //         else numOnes += 1;
+    //     }
+
+    //     for(int i=0; i<numZeros; i++){
+    //         arr[i] = 0;
+    //     }
+
+    //     for(int j=numZeros; j<n; j++){
+    //         arr[j] =1;
+    //     }
+    // }
+
+    //MEthod 2
     public static void segregate(int[] arr){
         int n = arr.length;
-        int numZeros = 0;
-        int numOnes = 0;
+        int i=0, j= n-1;
 
-        for(int i=0; i<n; i++){
-            if(arr[i] == 0) numZeros += 1;
-            else numOnes += 1;
-        }
-
-        for(int i=0; i<numZeros; i++){
-            arr[i] = 0;
-        }
-
-        for(int j=numZeros; j<n; j++){
-            arr[j] =1;
+        while(i<j){
+            if(arr[i]==0) i++;
+            if(arr[j]==1) j--;
+            if(i>j) break;
+            if(arr[i]==1 && arr[j]==0){
+                int temp =arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
+            }
         }
     }
 }
