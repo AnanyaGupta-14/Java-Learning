@@ -17,5 +17,15 @@ public class P12SearchInSortedMAtrix {
             else return true;
         }
         return false;
+
+        //Method 2
+        // int m = arr.length, n = arr[0].length;
+        // int i=0, j=n-1;
+        // while(i<m && j>=0){
+        //     if(arr[i][j]> target) j--;
+        //     else if (arr[i][j]< target) i++;
+        //     else return true;
+        // }
+        // return false;
     }
 }
